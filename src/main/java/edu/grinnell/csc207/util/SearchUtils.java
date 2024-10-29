@@ -103,8 +103,13 @@ public class SearchUtils {
    *   If no matching value is found.
    */
   public static <T> T search(Iterable<T> values, Predicate<? super T> pred) 
-      throws Exception {
-    throw new Exception("Unimplemented");       // STUB
+      throws Exception { 
+      for (  T value: values) {
+        if (pred.test(value)) {
+          return value;
+        } // if
+      } // for
+      throw new Exception( " no value find");
   } // search(Iterable<T>, Predicate<? super T>)
 
   /**
