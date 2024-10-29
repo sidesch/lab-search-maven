@@ -33,7 +33,7 @@ public class SearchUtils {
    */
   static int iterativeBinarySearch(int[] vals, int i) throws Exception {
     int lb = 0;
-    int ub = vals.length;
+    int ub = vals.length -1;
     int mid; 
     while (lb <= ub) {
       mid = (lb + ub) / 2;
