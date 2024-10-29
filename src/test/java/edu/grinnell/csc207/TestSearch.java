@@ -14,8 +14,6 @@ import edu.grinnell.csc207.util.SearchUtils;
 /**
  * Tests of our search methods.
  *
- * @author Your Name Here
- * @author Your Name Here
  * @author Samuel A. Rebelsky
  */
 public class TestSearch {
@@ -104,4 +102,16 @@ public class TestSearch {
     assertBinarySearchFails(new int[] { 7, 11 }, 20);
   } // testBinarySearchTwo()
 
+  @Test
+  void testBinarySearchThree() throws Exception {
+    assertBinarySearchFinds(0, new int[] {1, 2, 3}, 1);
+    assertBinarySearchFinds(1, new int[] {1, 2, 3}, 2);
+    assertBinarySearchFinds(2, new int[] {1, 2, 3}, 3);
+  } // testBinarySearchThree()
+
+  @Test
+  void testBinarySearchMultiple() throws Exception {
+    int[] ints = new int[] {1,1,1,2};
+    assertEquals(1, ints[SearchUtils.binarySearch(ints, 1)]);
+  } // testBinarySearchUnordered()
 } // class TestSearch
